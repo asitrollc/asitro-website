@@ -1,0 +1,7 @@
+https://github.com/berlotto/flask-app-template
+https://github.com/realpython/flask-boilerplate/blob/master/app.py
+https://github.com/rochacbruno/flask-project-template
+https://github.com/hayleyking/examples-forms
+https://github.com/pallets/flask/blob/main/docs/patterns/wtforms.rst
+https://github.com/learn-co-students/python-flask-app-HTML-templates-lab-data-science
+https://www.digitalocean.com/community/tutorials/how-to-use-templates-in-a-flask-application#step-6-integrating-bootstrap

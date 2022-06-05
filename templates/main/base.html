@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %} {% endblock %} - Asitro</title>
+    <link rel="stylesheet"type="text/css" href="{{ url_for('static', filename='css/index/bulma.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index/style.css') }}" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
+    <meta name="Asitro" content="Asitro offical website.">
+  <meta property="og:title" content="Asitro website">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asitro-website.rjmanhas.repl.co/">
+  <meta property="og:description" content="You can find everything you need about the bot here!.">
+  <meta property="og:image" content="{{ url_for('static', filename='img/index/relaunch_day.svg') }}">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tippy.js@6/animations/scale.css"
+    />
+    {% block link %}{% endblock %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="{{ url_for('static', filename='js/index/jquery-3.6.0.js') }}"></script>
+  </head>
+  <body>
+    <!-- Back To Top Start -->
+    <a id="backtotop" data-tippy-content="Back To Top.">
+      <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
+    </a>
+    <!-- Back To Top End -->
+
+    <!-- Navbar Start -->
+    <nav
+      class="navbar is-fixed-top"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand mt-2 mb-2">
+        <a class="navbar-item" href="#">
+          <strong>Asitro</strong>
+
+          <!-- or if you want to use image -->
+          <!-- <img
+            src="image link or path"
+            width="112"
+            height="28"
+          /> -->
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger has-text-white"
+          data-target="navMenu"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="#" class="navbar-item is-tab">
+            Home
+          </a>
+
+          <a href="#features" class="navbar-item is-tab">
+            Features
+          </a>
+          <a href="#stats" class="navbar-item is-tab">
+            Stats
+          </a>
+          <a href="#" class="navbar-item is-tab">
+            Discord Server
+          </a>
+          <a href="#" class="navbar-item is-tab">
+            Developers
+          </a>
+          <a href="{{url_for('redirect.status_page')}}" class="navbar-item is-tab">
+            Status
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="#" class="navbar-item is-tab" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+
+
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="#" class="button is-blurple">
+                <strong
+                  ><i class="fa-solid fa-right-to-bracket mr-2"></i>
+                  Login</strong
+                >
+
+              </a>
+<a href="{{url_for('redirect.discord_invite')}}" class="button is-blurple">
+                <strong
+                  ><i class="fa-solid fa-right-to-bracket mr-2"></i>
+                  Invite</strong
+                >
+
+              </a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    {% block body %} {% endblock %}
+    <!-- Hero Section Start -->
+    
+
+    <!-- Footer Section Start -->
+    <footer class="footer bg-base">
+      <div class="content has-text-centered has-text-white">
+        <div class="mb-2">
+          <a href="#" class="has-text-white" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+          &nbsp; &nbsp;
+        </div>
+
+        <p>
+          <span class="has-text-weight-bold">Asitro</span>
+          <br />
+          &copy; <span id="cp-year"></span> Copyright Asitro All Rights
+          Reserved.
+        </p>
+
+
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="{{ url_for('static', filename='js/index/script.js') }}"></script>
+  </body>
+</html>

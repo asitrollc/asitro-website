@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% block title %}{% endblock %} - astiro</title>
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
+  <meta name="Asitro" content="Asitro offical website.">
+  <meta property="og:title" content="Asitro website">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asitro-website.rjmanhas.repl.co/">
+  <meta property="og:description" content="You can find everything you need about the bot here!.">
+  <meta property="og:image" content="{{ url_for('static', filename='img/index/relaunch_day.svg') }}">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script src="{{ url_for('static', filename='js/errors/404.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/errors/404.css') }}">
+
+</head>
+
+<body>
+<div class="moon"></div>
+<div class="moon__crater moon__crater1"></div>
+<div class="moon__crater moon__crater2"></div>
+<div class="moon__crater moon__crater3"></div>
+
+<div class="star star1"></div>
+<div class="star star2"></div>
+<div class="star star3"></div>
+<div class="star star4"></div>
+<div class="star star5"></div>
+
+<div class="error">
+  <div class="error__title">{% block error %}{% endblock %}</div>
+  <div class="error__subtitle">Hmmm...</div>
+  <div class="error__description">It looks like one of the  developers fell asleep</div>
+  <a href="{{url_for('main.index')}}"><button class="error__button error__button--active">Home</button></a>
+  <a><button class="error__button error__button--active">Dashboard</button></a>
+</div>
+
+<div class="astronaut">
+  <div class="astronaut__backpack"></div>
+  <div class="astronaut__body"></div>
+  <div class="astronaut__body__chest"></div>
+  <div class="astronaut__arm-left1"></div>
+  <div class="astronaut__arm-left2"></div>
+  <div class="astronaut__arm-right1"></div>
+  <div class="astronaut__arm-right2"></div>
+  <div class="astronaut__arm-thumb-left"></div>
+  <div class="astronaut__arm-thumb-right"></div>
+  <div class="astronaut__leg-left"></div>
+  <div class="astronaut__leg-right"></div>
+  <div class="astronaut__foot-left"></div>
+  <div class="astronaut__foot-right"></div>
+  <div class="astronaut__wrist-left"></div>
+  <div class="astronaut__wrist-right"></div>
+  
+  <div class="astronaut__cord">
+    <canvas id="cord" height="500px" width="500px"></canvas>
+  </div>
+  
+  <div class="astronaut__head">
+    <canvas id="visor" width="60px" height="60px"></canvas>
+    <div class="astronaut__head-visor-flare1"></div>
+    <div class="astronaut__head-visor-flare2"></div>
+  </div>
+</div>
+  
+</body>
+</html>
